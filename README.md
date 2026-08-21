@@ -20,9 +20,9 @@ Vitality-Driven Freedom System — 一个可导航的世界模型（V0.2 Living 
 - **State Trajectory**：会话内最多 5 个状态节点（Past/Transition/Now/Future），节点叠加在 V×F 状态空间上（η 以节点完整度表达）；点击节点世界恢复记忆；Play Trajectory 让视觉/声音/Φ 同步经历一次状态演化；Diagnosis 可加入轨迹；+V/+F/+η 反事实探索（非预测）
 - **Public Release**：OG/Twitter 元数据、程序生成分享图（public/og.png）、apple-touch-icon、Methodology 免责声明、案例方法论标注
 
-## 部署注意
+## 部署
 
-og.png / canonical 使用相对路径或占位域名（vitality-freedom.pages.dev）；部署到正式域名后请在 index.html 中改为绝对地址。
+线上地址：https://dongsust.github.io/vitality-freedom/ （GitHub Pages，push 到 main 自动构建部署；canonical / og:image 已配置为绝对地址）。
 
 ## 运行
 
