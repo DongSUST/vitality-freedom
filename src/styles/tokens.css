@@ -1,0 +1,56 @@
+/* ============================================================
+   Design Tokens — Cosmic Cartography × Natural Landscape ×
+   Scientific Instrument
+   ============================================================ */
+:root {
+  /* — palette — */
+  --c-night-950: #04060b;
+  --c-night-900: #070b13;
+  --c-night-850: #0a0f1a;
+  --c-night-800: #0d1422;
+  --c-night-700: #111a2c;
+  --c-deep-600: #16283f;
+  --c-deep-500: #1d3a57;
+  --c-deep-400: #27506f;
+  --c-gold: #c9a86a;
+  --c-gold-bright: #ecd9ab;
+  --c-gold-deep: #8a7347;
+  --c-moon: #eef0e6;
+  --c-moon-dim: #aeb6c2;
+  --c-moon-faint: #6f7a8c;
+  --c-life: #8fb59b;
+  --c-life-bright: #b5d6be;
+  --c-ember: #c07a52;
+  --c-ember-deep: #8f5438;
+
+  /* — lines — */
+  --line-hair: rgba(201, 168, 106, 0.2);
+  --line-faint: rgba(238, 240, 230, 0.1);
+  --line-fainter: rgba(238, 240, 230, 0.06);
+
+  /* — surfaces — */
+  --bg-page: radial-gradient(120% 90% at 50% 0%, #0b1220 0%, #070c15 45%, #04060b 100%);
+  --panel-bg: rgba(9, 14, 24, 0.93);
+  --panel-border: rgba(201, 168, 106, 0.18);
+
+  /* — typography — */
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+    "Songti SC", "STSong", "SimSun", serif;
+  --font-body: "Avenir Next", Inter, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  /* — motion — */
+  --t-fast: 260ms;
+  --t-med: 480ms;
+  --t-slow: 800ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* — layers — */
+  --z-world: 1;
+  --z-panel: 50;
+  --z-topbar: 60;
+  --z-entrance: 70;
+}

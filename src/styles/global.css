@@ -1,0 +1,155 @@
+/* ============================================================
+   Global — reset, base, primitives
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+html { scrollbar-color: rgba(201, 168, 106, 0.3) transparent; }
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  background-attachment: fixed;
+  color: var(--c-moon);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection { background: rgba(201, 168, 106, 0.28); color: var(--c-moon); }
+
+h1, h2, h3, h4 { font-weight: 500; margin: 0; }
+p { margin: 0 0 1em; }
+ul { margin: 0; }
+a { color: var(--c-gold-bright); text-decoration: none; }
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+img, svg { display: block; }
+
+:focus-visible { outline: 1px solid var(--c-gold); outline-offset: 3px; border-radius: 2px; }
+
+/* — type helpers — */
+.serif { font-family: var(--font-display); }
+.mono { font-family: var(--font-mono); }
+.gold { color: var(--c-gold-bright); }
+.dim { color: var(--c-moon-dim); }
+.faint { color: var(--c-moon-faint); }
+.small { font-size: 12px; }
+.tiny { font-size: 10.5px; letter-spacing: 0.08em; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  opacity: 0.9;
+  margin: 0 0 10px;
+}
+
+/* — buttons — */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid var(--line-hair);
+  border-radius: 3px;
+  color: var(--c-moon);
+  background: rgba(201, 168, 106, 0.04);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  transition: border-color var(--t-fast) var(--ease-out),
+    background var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out),
+    transform var(--t-fast) var(--ease-out);
+}
+.btn:hover {
+  border-color: rgba(201, 168, 106, 0.55);
+  background: rgba(201, 168, 106, 0.09);
+  color: var(--c-gold-bright);
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { border-color: rgba(201, 168, 106, 0.45); color: var(--c-gold-bright); }
+.btn-ghost { border-color: var(--line-faint); color: var(--c-moon-dim); }
+.btn-ghost:hover { color: var(--c-moon); border-color: var(--line-hair); }
+.btn-selected {
+  border-color: var(--c-gold);
+  color: var(--c-gold-bright);
+  background: rgba(201, 168, 106, 0.1);
+}
+
+/* — scrollbars — */
+.scroll-area::-webkit-scrollbar { width: 8px; height: 8px; }
+.scroll-area::-webkit-scrollbar-thumb { background: rgba(201, 168, 106, 0.25); border-radius: 4px; }
+.scroll-area::-webkit-scrollbar-track { background: rgba(238, 240, 230, 0.03); }
+
+/* — range sliders — */
+input[type="range"].vf-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 22px;
+  margin: 0;
+  background: transparent;
+}
+.vf-slider::-webkit-slider-runnable-track {
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--c-deep-400), var(--c-gold-deep));
+}
+.vf-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  margin-top: -5.5px;
+  border-radius: 50%;
+  background: var(--c-night-900);
+  border: 1px solid var(--c-gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.12);
+  transition: box-shadow var(--t-fast) var(--ease-out);
+}
+.vf-slider:hover::-webkit-slider-thumb { box-shadow: 0 0 0 6px rgba(201, 168, 106, 0.16); }
+.vf-slider::-moz-range-track {
+  height: 2px;
+  background: linear-gradient(90deg, var(--c-deep-400), var(--c-gold-deep));
+}
+.vf-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--c-night-900);
+  border: 1px solid var(--c-gold);
+}
+
+/* — starfield canvas — */
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* — app shell — */
+.app { min-height: 100dvh; }
+
+/* — reduced motion — */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

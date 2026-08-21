@@ -1,0 +1,9 @@
+node_modules
+dist
+*.local
+.DS_Store
+npm-debug.log*
+shots
+.edge-tmp-*
+.edge-t1
+.npm-cache
